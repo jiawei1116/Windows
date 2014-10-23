@@ -1,0 +1,27 @@
+http://liaozi.blogspot.tw/2013/06/windows-7-64g-ssd-xd.html
+
+01.關閉休眠 - 用系統管理員執行cmd，輸入powercfg -h off
+02.關閉系統還原，並且將還原點刪除
+
+03.關閉虛擬記憶體
+右鍵點擊我的電腦->內容->進階系統設定
+然後在效能那邊選擇設定->進階
+看到虛擬記憶體選項，點擊變更進入
+選擇你的系統碟，下面選取"沒有分頁檔"後按設定
+接著按確定後重新啟動電腦
+
+
+
+04.用記事本，將下面這一段存成.bat檔，並以系統管理員執行
+CD\         
+CD %Windir%         
+CD SoftwareDistribution         
+DEL /F /S /Q Download
+
+05.執行cleanmgr
+a. 先執行cleanmgr.exe /sageset:99設定，所有都打勾，清理系統檔也要進入選取
+b. 將下面這段存成捷徑，並執行
+C:\Windows\System32\cleanmgr.exe /sagerun:99
+
+01~03只需執行一次即可
+04~05則定期執行
