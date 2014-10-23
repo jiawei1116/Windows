@@ -25,3 +25,20 @@ C:\Windows\System32\cleanmgr.exe /sagerun:99
 
 01~03只需執行一次即可
 04~05則定期執行
+
+
+
+2.驗證TRIM有無啟用 (需啟用)
+以管理員身分開啟cmd，輸入fsutil behavior query DisableDeleteNotify
+按下Enter
+如果DisableDeleteNotify = 0，則 TRIM啟用
+如果DisableDeleteNotify = 1，則 TRIM被禁用
+
+1.開啟AHCI功能
+進入主機板BIOS將SATA模式更改為AHCI，若開啟後無法正常開機(藍白)
+
+11.調整電源設置
+進入控制台->電源選項
+選擇目前選用的電源計畫，再進入變更計畫設定->變更進階電源設定
+將硬碟->關閉硬碟前的時間，改為"永不"
+按下套用->確定 離開
