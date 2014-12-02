@@ -1,0 +1,13 @@
+dir > print.txt
+
+The above command takes the list of all the files and all of the information about the files, 
+including size, modified date, etc., and send that output to the print.txt file in the current directory.
+
+dir /b > print.txt
+
+This command would print only the file names and not the file information of the files in the current directory.
+
+dir /s /b > print.txt
+
+This command would print only the file names of the files in the current directory and any other files 
+in the directories in the current directory.
